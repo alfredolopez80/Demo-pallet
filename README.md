@@ -9,10 +9,6 @@ A fresh FRAME-based [Substrate](https://www.substrate.io/) node, ready for hacki
 Follow the steps below to get started with the Node Template, or get it up and running right from your browser
 in just a few clicks using [Playground](https://playground.substrate.dev/) :hammer_and_wrench:
 
-### Using Nix
-
-Install [nix](https://nixos.org/) and optionally [direnv](https://github.com/direnv/direnv) and [lorri](https://github.com/target/lorri) for a fully plug
-and play experience for setting up the development environment. To get all the correct dependencies activate direnv `direnv allow` and lorri `lorri shell`.
 
 ### Rust Setup
 
@@ -59,4 +55,4 @@ This repository also contains a number of FRAME pallets based on V2
 
 #### - Nodle Pallet
   This is useful to change parameter values gradually to ensure a smooth transition. It is also possible to cancel an update before it reaches to target value.
-  PD: The Pallet is tested through Test of Substrate, because Polkadot.JS is Complicated due to the nature of the values.
+  PD: The Pallet is tested through Test of Substrate (cargo test --all) , because Polkadot.JS is Complicated due to the nature of the values.

@@ -14,7 +14,6 @@ mod benchmarking;
 pub mod pallet {
 	use frame_support::{dispatch::DispatchResult, traits::UnixTime ,pallet_prelude::*};
 	use frame_system::pallet_prelude::*;
-	use sp_std::time::Duration;
 
 	/// Configure the pallet by specifying the parameters and types on which it depends.
 	#[pallet::config]
@@ -45,7 +44,7 @@ pub mod pallet {
 	pub enum Event<T: Config> {
 		/// Event documentation should end with an array that provides descriptive names for event
 		/// parameters. [something, who]
-		SomethingStored(u32, T::AccountId, Duration),
+		SomethingStored(u32, T::AccountId),
 	}
 
 	// Errors inform users that something went wrong.
@@ -71,13 +70,11 @@ pub mod pallet {
 			// https://substrate.dev/docs/en/knowledgebase/runtime/origin
 			let who = ensure_signed(origin)?;
 
-			let timestamp: Duration = T::TimeProvider::now();
-
 			// Update storage.
 			<Something<T>>::put(something);
 
 			// Emit an event.
-			Self::deposit_event(Event::SomethingStored(something, who, timestamp));
+			Self::deposit_event(Event::SomethingStored(something, who));
 			// Return a successful DispatchResultWithPostInfo
 			Ok(())
 		}
