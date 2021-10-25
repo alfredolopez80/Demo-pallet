@@ -10,19 +10,14 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
  
 
-# Make data base, printed on Sat Oct 23 20:12:42 2021
+# Make data base, printed on Sun Oct 24 17:04:09 2021
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-LC_CTYPE = UTF-8
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -48,9 +43,9 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/k9/2bqrfmpj61z_w002twx_28480000gn/T/vscode-ipc-b49e0396-ce48-4dd7-8ba7-5a4b67d7f718.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/k9/2bqrfmpj61z_w002twx_28480000gn/T/vscode-ipc-bd65b598-f23c-4c61-8242-b24732ae2f19.sock
 # environment
-VSCODE_CWD = /Users/alfredolopez/Documents/GitHub/SUBS.DEV/exercise-1-and-2
+VSCODE_CWD = /
 # environment
 PATH = /Users/alfredolopez/.svm/solc/0.8.4:/opt/homebrew/opt/gnu-getopt/bin:/opt/homebrew/opt/openldap/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/Users/alfredolopez/.cargo/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
 # environment
@@ -62,7 +57,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1E1LJmtoV3/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ido1efjCHk/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -78,12 +73,9 @@ MANPATH = /opt/homebrew/share/man::
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
- 
 HOME = /Users/alfredolopez
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
-# environment
-VSCODE_CLI = 1
 # environment
 VSCODE_CODE_CACHE_PATH = /Users/alfredolopez/Library/Application Support/Code/CachedData/6cba118ac49a1b88332f312a8f67186f7f3c1643
 # environment
@@ -97,36 +89,27 @@ ZSH = /Users/alfredolopez/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
- 
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
 # environment
-LC_TERMINAL = iTerm2
-# environment
-SHLVL = 3
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = alfredolopez
 # makefile
 .DEFAULT_GOAL := run-tmp
-# default
-MAKECMDGOALS := all
-# environment
-TERM_SESSION_ID = w0t0p0:145BF121-170E-4ABC-AF7E-347316E10229
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
-# environment
-TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
 # environment
@@ -142,15 +125,11 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 3.4.20211021-nightly
-# environment
 NVM_DIR = /Users/alfredolopez/.nvm
 # environment
 HOMEBREW_SHELLENV_PREFIX = /opt/homebrew
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.51812511.51812517.77442C1E-6D76-47AD-B807-E65036164A54
-# environment
-LC_TERMINAL_VERSION = 3.4.20211021-nightly
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.51812511.51812517
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -158,13 +137,7 @@ HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +F = $(notdir $+)
 # environment
-TERMINFO_DIRS = /Applications/iTerm.app/Contents/Resources/terminfo:/usr/share/terminfo
-# environment
-ITERM_SESSION_ID = w0t0p0:145BF121-170E-4ABC-AF7E-347316E10229
-# environment
 HOMEBREW_REPOSITORY = /opt/homebrew
-# environment
-COLORFGBG = 15;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x56
 # environment
@@ -173,8 +146,6 @@ COMMAND_MODE = unix2003
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
-# environment
-ITERM_PROFILE = Default
 # environment
 PAGER = less
 # environment
@@ -188,13 +159,10 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
- 
-VSCODE_PID = 21434
+VSCODE_PID = 931
 # variable set hash-table stats:
  
-# Load=87/1024=8%, Rehash=0, Collisions=4/110=4%
+# Load=73/1024=7%, Rehash=0, Collisions=1/96=1%
 
 # Pattern-specific Variable Values
 
@@ -202,9 +170,10 @@ VSCODE_PID = 21434
 
 # Directories
 
-# . (device 16777233, inode 51230468): 24 files, no impossibilities.
+# . (device 16777234, inode 51230468): 25 files, no impossibilities.
+ 
 
-# 24 files, no impossibilities in 1 directories.
+# 25 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -218,7 +187,6 @@ all:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
- 
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -328,6 +296,6 @@ check:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Oct 23 20:12:42 2021
+# Finished Make data base on Sun Oct 24 17:04:09 2021
 
  

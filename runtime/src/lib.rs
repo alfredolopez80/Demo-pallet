@@ -31,11 +31,12 @@ pub use pallet_balances::Call as BalancesCall;
 pub use sp_runtime::{Permill, Perbill};
 pub use frame_support::{
 	construct_runtime, parameter_types, StorageValue,
-	traits::{KeyOwnerProofSystem, Randomness},
+	traits::{KeyOwnerProofSystem, Randomness, EnsureOrigin, Get},
 	weights::{
 		Weight, IdentityFee,
 		constants::{BlockExecutionWeight, ExtrinsicBaseWeight, RocksDbWeight, WEIGHT_PER_SECOND},
 	},
+	BoundedVec,
 };
 use pallet_transaction_payment::CurrencyAdapter;
 
@@ -270,10 +271,25 @@ impl pallet_sudo::Config for Runtime {
 /// Configure the pallet-template in pallets/template.
 impl pallet_template::Config for Runtime {
 	type Event = Event;
+	type TimeProvider = pallet_timestamp::Pallet<Runtime>;
+}
+
+parameter_types! {
+	pub const UpdateFrequency: BlockNumber = 10;
+	pub MaxGraduallyUpdate: u32 = 3;
+	pub MaxStorageKeyBytes: u32 = 100_000;
+	pub MaxStorageValueBytes: u32 = 100_000;
 }
 
 /// Configure the pallet-nodle in pallets/nodle.
 impl pallet_nodle::Config for Runtime {
+	type Event = Event;
+	type UpdateFrequency = UpdateFrequency;
+	type DispatchOrigin = frame_system::EnsureRoot<AccountId>;
+	type WeightInfo = ();
+	type MaxGraduallyUpdate = MaxGraduallyUpdate;
+	type MaxStorageKeyBytes = MaxStorageKeyBytes;
+	type MaxStorageValueBytes = MaxStorageValueBytes;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
@@ -294,7 +310,7 @@ construct_runtime!(
 		// Include the custom logic from the pallet-template in the runtime.
 		TemplateModule: pallet_template::{Pallet, Call, Storage, Event<T>},
 		// Substrate Nodle pallet
-		NodleModule: pallet_nodle::{Pallet},
+		NodleModule: pallet_nodle::{Pallet, Call, Storage, Event<T>},
 	}
 );
 
