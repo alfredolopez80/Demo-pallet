@@ -54,9 +54,9 @@ template pallet that is [defined in the `pallets`](./pallets/template/src/lib.rs
 
 This repository also contains a number of FRAME pallets based on V2
 
-- *Template Pallet*
+#### - Template Pallet
   Permit connect through Polkadot-JS Front-end, for test Simple Storage and Event based in Call (Extrinsic) in this palles
 
-- *Nodle Pallet*
+#### - Nodle Pallet
   This is useful to change parameter values gradually to ensure a smooth transition. It is also possible to cancel an update before it reaches to target value.
   PD: The Pallet is tested through Test of Substrate, because Polkadot.JS is Complicated due to the nature of the values.
