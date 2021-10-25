@@ -7,7 +7,8 @@
 //! smooth transition. It is also possible to cancel an update before it reaches
 //! to target value.
 //!
-//! PD: Only unsigned integer value up to 128 bits are supported.
+//! PD: The Pallet is tested through Test of Substrate, because Polkadot.JS is
+//! Complicated due to the nature of the values.
 //!
 #![cfg_attr(not(feature = "std"), no_std)]
 // Disable the following two lints since they originate from an external macro (namely decl_storage)
